@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>276 asn1</title>
+    <link rel="stylesheet" href="stylesheets/histogram.css">
+    <script defer src="calculate.js"></script>
+  </head>
+  <body>
+
+  <!-- <script src="calculate.js"></script> -->
+  <h1>Histogram Generator</h1>
+    <section class="row">
+      <div class="column" id="leftcolumn">
+        <section class="lowerBounds">
+          <h2 id="lowerboundstitle">Lower bounds</h2>
+          <section>
+            <section id="block_container">
+              <div class="lettergrade">Max</div>
+              <form>
+                <input class="numbergrade" onchange="newLowerBound(event)" type="number" id="maxGrade" name="max" value="100.00" min="" max="">
+              </form>
+            </section>
+
+            <section id="block_container">
+              <div class="lettergrade">A+</div>
+              <form>
+                <input class="numbergrade" onchange="newLowerBound(event)" type="number" id="aPlusGrade" name="fname" value="95.00" min="" max="">
+              </form>
+            </section>
+
+            <section id="block_container">
+              <div class="lettergrade">A</div>
+              <form>
+                <input class="numbergrade" onchange="newLowerBound(event)" type="number" id="aGrade" name="fname" value="90.00" min="" max="">
+              </form>
+            </section>
+
+            <section id="block_container">
+              <div class="lettergrade">A-</div>
+              <form>
+                <input class="numbergrade" onchange="newLowerBound(event)" type="number" id="aMinusGrade" name="fname" value="85.00" min="" max="">
+              </form>
+            </section>
+
+            <section id="block_container">
+              <div class="lettergrade">B+</div>
+              <form>
+                <input class="numbergrade" onchange="newLowerBound(event)" type="number" id="bPlusGrade" name="fname" value="80.00" min="" max="">
+              </form>
+            </section>
+
+            <section id="block_container">
+              <div class="lettergrade">B</div>
+              <form>
+                <input class="numbergrade" onchange="newLowerBound(event)" type="number" id="bGrade" name="fname" value="75.00" min="" max="">
+              </form>
+            </section>
+
+            <section id="block_container">
+              <div class="lettergrade">B-</div>
+              <form>
+                <input class="numbergrade" onchange="newLowerBound(event)" type="number" id="bMinusGrade" name="fname" value="70.00" min="" max="">
+              </form>
+            </section>
+
+            <section id="block_container">
+              <div class="lettergrade">C+</div>
+              <form>
+                <input class="numbergrade" onchange="newLowerBound(event)"
+                type="number" id="cPlusGrade" name="fname" value="65.00" min="" max="">
+              </form>
+            </section>
+
+            <section id="block_container">
+              <div class="lettergrade">C</div>
+              <form>
+                <input class="numbergrade" onchange="newLowerBound(event)" type="number" id="cGrade" name="fname" value="60.00" min="" max="">
+              </form>
+            </section>
+
+            <section id="block_container">
+              <div class="lettergrade">C-</div>
+              <form>
+                <input class="numbergrade" onchange="newLowerBound(event)" type="number" id="cMinusGrade" name="fname" value="55.00" min="" max="">
+              </form>
+            </section>
+
+            <section id="block_container">
+              <div class="lettergrade">D</div>
+              <form>
+                <input class="numbergrade" onchange="newLowerBound(event)" type="number" id="dGrade" name="fname" value="50.00" min="" max="">
+              </form>
+            </section>
+
+            <section id="block_container">
+              <div class="lettergrade">F</div>
+              <form>
+                <input class="numbergrade" onchange="newLowerBound(event)" type="number" id="fGrade" name="fname" value="0.00" min="" max="">
+              </form>
+            </section>
+            
+          </section>
+      </div>      
+        <!-- </section> -->
+        <br>
+        
+      <div class="column" id="rightcolumn">
+        <section class="histogram">
+          <h1 id="histogramtitle">Histogram</h1>
+
+            <section id="block_container2">
+              <div class="histogramlettergrade {
+                ">A+</div>
+              <div class="histogramgrade A+" id="A+" value=""></div>
+            </section>
+
+            <section id="block_container2">
+              <div class="histogramlettergrade {
+                ">A</div>
+              <div class="histogramgrade A" id="A"  value=""></div>
+            </section>
+
+            <section id="block_container2">
+              <div class="histogramlettergrade {
+                ">A-</div>
+              <div class="histogramgrade A-" id="A-" value=""></div>
+            </section>
+
+            <section id="block_container2">
+              <div class="histogramlettergrade {
+                ">B+</div>
+              <div class="histogramgrade B+" id="B+" value=""></div>
+            </section>
+
+            <section id="block_container2">
+              <div class="histogramlettergrade {
+                ">B</div>
+              <div class="histogramgrade B" id="B"  value=""></div>
+            </section>
+
+            <section id="block_container2">
+              <div class="histogramlettergrade {
+                ">B-</div>
+              <div class="histogramgrade B-" id="B-"  value=""></div>
+            </section>
+
+            <section id="block_container2">
+              <div class="histogramlettergrade {
+                ">C+</div>
+              <div class="histogramgrade C+" id="C+"  value=""></div>
+            </section>
+
+            <section id="block_container2">
+              <div class="histogramlettergrade {
+                ">C</div>
+              <div class="histogramgrade C" id="C"  value=""></div>
+            </section>
+
+            <section id="block_container2">
+              <div class="histogramlettergrade {
+                ">C-</div>
+              <div class="histogramgrade C-" id="C-" value=""></div>
+            </section>
+
+            <section id="block_container2">
+              <div class="histogramlettergrade {
+                ">D</div>
+              <div class="histogramgrade D" id="D" value=""></div>
+            </section>
+
+            <section id="block_container2">
+              <div class="histogramlettergrade {
+                ">F</div>
+              <div class="histogramgrade F" id="F" value=""></div>
+            </section>
+
+          </section>
+          <br>
+          <section class="newgrade" >
+            <form action="" method="post" onsubmit="return newSubmitValue()">
+  
+              <label class="newgradelettergrade">New Grade:</label>
+  
+              <input class="newgradegrade" type="number" id="newgradesubmission" min="" value="" step=".01">
+  
+              <input type="submit" id="newgradesubmission2" name="submit" value="Submit!">
+  
+            </form>
+  
+          </section>
+      </div>
+      <!-- <div class="column" id="thirdcolumn"></div> -->
+        <br>
+
+
+        <!-- <section class="newgrade" >
+          <form action="" method="post" onsubmit="return newSubmitValue()">
+
+            <label class="newgradelettergrade">New Grade:</label>
+
+            <input class="newgradegrade" type="number" id="newgradesubmission" min="0" value="">
+
+            <input type="submit" id="newgradesubmission2" name="submit" value="Submit!">
+
+          </form>
+
+        </section> -->
+      </section>
+      </div>
+    </section>
+      <!-- </section> -->
+
+
+  </body>
+</html>
